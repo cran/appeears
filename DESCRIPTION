@@ -1,6 +1,6 @@
 Package: appeears
-Title: Interface to 'AppEARS' NASA Web Services
-Version: 1.0
+Title: Interface to 'AppEEARS' NASA Web Services
+Version: 1.1
 Authors@R: c(person(
                family = "Hufkens",
                given = "Koen",
@@ -32,10 +32,10 @@ Suggests: rmarkdown, covr, testthat, terra, ncdf4, knitr, rlang, dplyr,
         ggplot2, patchwork
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2023-05-22 12:30:53 UTC; khufkens
+Packaged: 2023-09-15 14:47:34 UTC; khufkens
 Author: Koen Hufkens [aut, cre] (<https://orcid.org/0000-0002-5070-8109>),
   Elio Campitelli [ctb] (<https://orcid.org/0000-0002-7742-9230>),
   BlueGreen Labs [cph, fnd]
 Maintainer: Koen Hufkens <koen.hufkens@gmail.com>
 Repository: CRAN
-Date/Publication: 2023-05-22 18:20:05 UTC
+Date/Publication: 2023-09-15 15:02:06 UTC

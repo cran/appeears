@@ -12,7 +12,7 @@
 
 <meta name="author" content="Koen Hufkens" />
 
-<meta name="date" content="2023-05-22" />
+<meta name="date" content="2023-09-15" />
 
 <title>AppEEARS functionality</title>
 
@@ -340,7 +340,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 <h1 class="title toc-ignore">AppEEARS functionality</h1>
 <h4 class="author">Koen Hufkens</h4>
-<h4 class="date">2023-05-22</h4>
+<h4 class="date">2023-09-15</h4>
 
 
 
@@ -392,7 +392,7 @@ listed under various versions.</p>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(products<span class="sc">$</span>ProductAndVersion)</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;GPW_DataQualityInd.411&quot;    &quot;GPW_UN_Adj_PopCount.411&quot;  </span></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [3] &quot;GPW_UN_Adj_PopDensity.411&quot; &quot;GPW_Basic_Demog_Char.411&quot; </span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [5] &quot;MCD12Q1.006&quot;               &quot;MCD12Q2.006&quot;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [5] &quot;MCD12Q1.061&quot;               &quot;MCD12Q2.061&quot;</span></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># list all layers for a particular</span></span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># product</span></span>
@@ -401,55 +401,8 @@ listed under various versions.</p>
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(layers)</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   AddOffset Available DataType</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1                TRUE    int16</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2                TRUE    int16</span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3                TRUE    int16</span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4                TRUE    int16</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5                TRUE    int16</span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6                TRUE    int16</span></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                      Description</span></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1  Date when EVI2 last crossed 15% of the segment EVI2 amplitude</span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2                                 Segment maximum - minimum EVI2</span></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3        Sum of daily interpolated EVI2 from Greenup to Dormancy</span></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4                                     Segment minimum EVI2 value</span></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5 Date when EVI2 first crossed 15% of the segment EVI2 amplitude</span></span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6 Date when EVI2 first crossed 90% of the segment EVI2 amplitude</span></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                    Dimensions FillValue FillValueRaw Group  IsQA         Layer</span></span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 time, YDim, XDim, Num_Modes     32767        32767       FALSE      Dormancy</span></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 time, YDim, XDim, Num_Modes     32767        32767       FALSE EVI_Amplitude</span></span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3 time, YDim, XDim, Num_Modes     32767        32767       FALSE      EVI_Area</span></span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4 time, YDim, XDim, Num_Modes     32767        32767       FALSE   EVI_Minimum</span></span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5 time, YDim, XDim, Num_Modes     32767        32767       FALSE       Greenup</span></span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6 time, YDim, XDim, Num_Modes     32767        32767       FALSE      Maturity</span></span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   OrigDataType OrigValidMax OrigValidMin</span></span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1        int16        32766        11138</span></span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2        int16        10000            0</span></span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3        int16         3700            0</span></span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4        int16        10000            0</span></span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5        int16        32766        11138</span></span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6        int16        32766        11138</span></span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                     QualityLayers</span></span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 [&#39;QA_Detailed_0&#39;,&#39;QA_Detailed_1&#39;,&#39;QA_Overall_0&#39;,&#39;QA_Overall_1&#39;]</span></span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 [&#39;QA_Detailed_0&#39;,&#39;QA_Detailed_1&#39;,&#39;QA_Overall_0&#39;,&#39;QA_Overall_1&#39;]</span></span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3 [&#39;QA_Detailed_0&#39;,&#39;QA_Detailed_1&#39;,&#39;QA_Overall_0&#39;,&#39;QA_Overall_1&#39;]</span></span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4 [&#39;QA_Detailed_0&#39;,&#39;QA_Detailed_1&#39;,&#39;QA_Overall_0&#39;,&#39;QA_Overall_1&#39;]</span></span>
-<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5 [&#39;QA_Detailed_0&#39;,&#39;QA_Detailed_1&#39;,&#39;QA_Overall_0&#39;,&#39;QA_Overall_1&#39;]</span></span>
-<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6 [&#39;QA_Detailed_0&#39;,&#39;QA_Detailed_1&#39;,&#39;QA_Overall_0&#39;,&#39;QA_Overall_1&#39;]</span></span>
-<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   QualityProductAndVersion ScaleFactor Units ValidMax ValidMin XSize YSize</span></span>
-<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1              MCD12Q2.006           1   Day    32766    11138  2400  2400</span></span>
-<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2              MCD12Q2.006       1e-04  EVI2    10000        0  2400  2400</span></span>
-<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3              MCD12Q2.006         0.1  EVI2     3700        0  2400  2400</span></span>
-<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4              MCD12Q2.006       1e-04  EVI2    10000        0  2400  2400</span></span>
-<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5              MCD12Q2.006           1   Day    32766    11138  2400  2400</span></span>
-<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6              MCD12Q2.006           1   Day    32766    11138  2400  2400</span></span>
-<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;            Band</span></span>
-<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1      Dormancy</span></span>
-<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 EVI_Amplitude</span></span>
-<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3      EVI_Area</span></span>
-<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4   EVI_Minimum</span></span>
-<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5       Greenup</span></span>
-<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6      Maturity</span></span></code></pre></div>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                  V1    Band</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 Product not found message</span></span></code></pre></div>
 </div>
 <div id="point-based-data-requests" class="section level3">
 <h3>Point based data requests</h3>
