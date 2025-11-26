@@ -1,4 +1,4 @@
-499ad0797e74ab330cff4f8d3bb45faa *DESCRIPTION
+22f167f11ad7f2776fd01b04e64bc5a0 *DESCRIPTION
 9d24481799258a294218f3351a9933c0 *NAMESPACE
 44d6b7ff6b784a88ce962a221eff73b8 *R/rs_build_task.R
 6202e43ae51ec73646b884a2d8ba528c *R/rs_bundle.R
@@ -9,18 +9,18 @@ dbea8d94381cd14edb1d5bfdb069f5ae *R/rs_layers.R
 ccab6597102a0dd1ed59313b8f801cfe *R/rs_login.R
 2f4f66d4dc53ad3c1c3bc9a10b41bc09 *R/rs_products.R
 ad03f8dd2b9e6d37357a2d9982d205bc *R/rs_quality.R
-db5a278bd03ba09242ee63d5240970a7 *R/rs_request.R
+4c9a736f4445cf438c83bb54817ed973 *R/rs_request.R
 96433690f65dc9bee7a64b96a9364d74 *R/rs_request_batch.R
 4cd2018adf4355ca5b7db9dce7ead059 *R/rs_set_key.R
 6c8fd9f65eca9e9469f6857eaaffbb5e *R/rs_transfer.R
-80bebd89ec25a123ffbe79570bf523d3 *R/service-appeears.R
+a7745a98ee55093d91841b039eeed247 *R/service-appeears.R
 7d6c72b4feb2ac589fa96c0fb0d75c2a *R/service.R
 7ef98e11d894dffbf340d0cccbd4e4d4 *R/zzz.R
-0b9000be56e8d4bdc12a52d68145638c *build/vignette.rds
+c0f6bfd595f3fa011fa05c17c5849686 *build/vignette.rds
 094a402e39a63665a837fecfd0b60e92 *inst/CITATION
-af337a11521c4eab12d9e6d4ea9803e7 *inst/doc/appeears_vignette.R
+964f851c57a2cb0bb477248760e82705 *inst/doc/appeears_vignette.R
 de9f6506be6e96fc61a5129ca49211a4 *inst/doc/appeears_vignette.Rmd
-47ffe895fd5d159886d83db5b48eb729 *inst/doc/appeears_vignette.html
+868dbad5b6b57fd72b1025becec09a04 *inst/doc/appeears_vignette.html
 d38f2ea45eadebb5107f5209b0edca89 *inst/extdata/polygon/MCD12Q2-006-QA-Detailed-0-Statistics-QA.csv
 411bda70b4983b2ffdb48e53fc84e870 *inst/extdata/polygon/MCD12Q2-006-QA-Detailed-0-lookup.csv
 32d1606125b6492290f4a658b0da83ba *inst/extdata/polygon/MCD12Q2-006-QA-Detailed-1-Statistics-QA.csv
@@ -64,6 +64,7 @@ eb8ef379407ae2bfada03e63692d0338 *inst/extdata/time_series/time-series-MCD43A4-0
 f74e533f9b68dbf8ddf17bea507b7bfb *inst/extdata/time_series/time-series-MCD43A4-061-results.csv
 e7df35740162c2782f258573381c3475 *inst/extdata/time_series/time-series-granule-list.txt
 2e45ba2411fcad494afec365b7c596cb *inst/extdata/time_series/time-series-request.json
+212cf8d538c3242f2b7c1a12618438ab *man/figures/logo.png
 b0d51b82a7178ecf7982c78346b7566b *man/rs_build_task.Rd
 7615cff4963b0c8aed1303f24f2e3259 *man/rs_bundle.Rd
 fc7c70becd096d17296fa6ec51c7a4f2 *man/rs_delete.Rd
@@ -74,7 +75,7 @@ a1114859fe9e2eab87061686a5b2d563 *man/rs_login.Rd
 88800896a76374f676334af4fbee9972 *man/rs_logout.Rd
 cd2ece4c94d7560a8fbfdd4c093d14b4 *man/rs_products.Rd
 e22d358507f344a84a30ac3d4a736e1a *man/rs_quality.Rd
-cc03b183e0995432010c1bdfdffaf816 *man/rs_request.Rd
+6a233b352cc3303e5ea2ee6bbebace7a *man/rs_request.Rd
 8f6ba51cf493bd2f3cce26fbc0216df5 *man/rs_set_key.Rd
 9dd50b0fac138b8c77aa225f0fb130ec *man/rs_transfer.Rd
 68e60660f95d17f713561b11d8446c0a *tests/testthat.r

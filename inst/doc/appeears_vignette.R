@@ -30,26 +30,26 @@ time_series <- read.table(
   )
 
 ## ----eval = FALSE-------------------------------------------------------------
-#  library(appeears)
-#  
-#  # set a key to the keychain
-#  rs_set_key(
-#    user = "earth_data_user",
-#    password = "XXXXXXXXXXXXXXXXXXXXXX"
-#    )
-#  
-#  # you can retrieve the password using
-#  rs_get_key(user = "earth_data_user")
-#  
-#  # the output should be the key you provided
-#  # "XXXXXXXXXXXXXXXXXXXXXX"
+# library(appeears)
+# 
+# # set a key to the keychain
+# rs_set_key(
+#   user = "earth_data_user",
+#   password = "XXXXXXXXXXXXXXXXXXXXXX"
+#   )
+# 
+# # you can retrieve the password using
+# rs_get_key(user = "earth_data_user")
+# 
+# # the output should be the key you provided
+# # "XXXXXXXXXXXXXXXXXXXXXX"
 
 ## ----eval = FALSE-------------------------------------------------------------
-#  # request the current token
-#  token <- rs_login(user = "earth_data_user")
-#  
-#  # invalidate the current session
-#  rs_logout(token)
+# # request the current token
+# token <- rs_login(user = "earth_data_user")
+# 
+# # invalidate the current session
+# rs_logout(token)
 
 ## -----------------------------------------------------------------------------
 # list all product information
@@ -67,49 +67,49 @@ layers <- rs_layers(
 head(layers)
 
 ## ----eval = FALSE-------------------------------------------------------------
-#  # Load the library
-#  library(appeears)
-#  
-#  # list all products
-#  rs_products()
-#  
-#  # list layers of the MOD11A2.061 product
-#  rs_layers("MOD11A2.061")
-#  
-#  df <- data.frame(
-#    task = "time_series",
-#    subtask = "US-Ha1",
-#    latitude = 42.5378,
-#    longitude = -72.1715,
-#    start = "2010-01-01",
-#    end = "2010-12-31",
-#    product = "MCD43A4.061",
-#    layer = c("Nadir_Reflectance_Band3","Nadir_Reflectance_Band4")
-#  )
-#  
-#  # build the area based request/task
-#  # rename the task name so data will
-#  # be saved in the "point" folder
-#  # as defined by the task name
-#  df$task <- "point"
-#  task <- rs_build_task(df = df)
-#  
-#  # request the task to be executed
-#  rs_request(
-#    request = task,
-#    user = "earth_data_user",
-#    transfer = TRUE,
-#    path = "~/some_path",
-#    verbose = TRUE
-#  )
+# # Load the library
+# library(appeears)
+# 
+# # list all products
+# rs_products()
+# 
+# # list layers of the MOD11A2.061 product
+# rs_layers("MOD11A2.061")
+# 
+# df <- data.frame(
+#   task = "time_series",
+#   subtask = "US-Ha1",
+#   latitude = 42.5378,
+#   longitude = -72.1715,
+#   start = "2010-01-01",
+#   end = "2010-12-31",
+#   product = "MCD43A4.061",
+#   layer = c("Nadir_Reflectance_Band3","Nadir_Reflectance_Band4")
+# )
+# 
+# # build the area based request/task
+# # rename the task name so data will
+# # be saved in the "point" folder
+# # as defined by the task name
+# df$task <- "point"
+# task <- rs_build_task(df = df)
+# 
+# # request the task to be executed
+# rs_request(
+#   request = task,
+#   user = "earth_data_user",
+#   transfer = TRUE,
+#   path = "~/some_path",
+#   verbose = TRUE
+# )
 
 ## ----eval = FALSE-------------------------------------------------------------
-#  # read in data
-#  time_series <- read.table(
-#    "~/some_path/time_series/time-series-MCD43A4-061-results.csv",
-#    header = TRUE,
-#    sep = ","
-#    )
+# # read in data
+# time_series <- read.table(
+#   "~/some_path/time_series/time-series-MCD43A4-061-results.csv",
+#   header = TRUE,
+#   sep = ","
+#   )
 
 ## ----warning=FALSE------------------------------------------------------------
 # convert band 3 and 4 to NDVI
@@ -166,31 +166,31 @@ roi <- st_read(system.file("gpkg/nc.gpkg", package="sf"), quiet = TRUE) |>
   )
 
 ## ----eval = FALSE-------------------------------------------------------------
-#  # build the area based request/task
-#  # rename the task name so data will
-#  # be saved in the "polygon" folder
-#  # as defined by the task name
-#  df$task <- "polygon"
-#  task <- rs_build_task(
-#    df = df,
-#    roi = roi,
-#    format = "geotiff"
-#  )
-#  
-#  # request the task to be executed
-#  rs_request(
-#    request = task,
-#    user = "earth_data_user",
-#    transfer = TRUE,
-#    path = "~/some_path",
-#    verbose = TRUE
-#  )
+# # build the area based request/task
+# # rename the task name so data will
+# # be saved in the "polygon" folder
+# # as defined by the task name
+# df$task <- "polygon"
+# task <- rs_build_task(
+#   df = df,
+#   roi = roi,
+#   format = "geotiff"
+# )
+# 
+# # request the task to be executed
+# rs_request(
+#   request = task,
+#   user = "earth_data_user",
+#   transfer = TRUE,
+#   path = "~/some_path",
+#   verbose = TRUE
+# )
 
 ## ----eval=FALSE---------------------------------------------------------------
-#  library(terra)
-#  r_polygon <- terra::rast(
-#    file.path("~/some_path","polygon/MCD12Q2.006_Greenup_0_doy2010001_aid0001.tif")
-#    )
+# library(terra)
+# r_polygon <- terra::rast(
+#   file.path("~/some_path","polygon/MCD12Q2.006_Greenup_0_doy2010001_aid0001.tif")
+#   )
 
 ## -----------------------------------------------------------------------------
 # convert to data frame for plotting
@@ -249,31 +249,31 @@ f <- system.file("ex/elev.tif", package="terra")
 roi <- terra::rast(f)
 
 ## ----eval = FALSE-------------------------------------------------------------
-#  
-#  # build the area based request/task
-#  # rename the task name so data will
-#  # be saved in the "raster" folder
-#  # as defined by the task name
-#  df$task <- "raster"
-#  task <- rs_build_task(
-#    df = df,
-#    roi = roi,
-#    format = "geotiff"
-#  )
-#  
-#  # request the task to be executed
-#  rs_request(
-#    request = task,
-#    user = "earth_data_user",
-#    transfer = TRUE,
-#    path = "~/some_path",
-#    verbose = TRUE
-#  )
+# 
+# # build the area based request/task
+# # rename the task name so data will
+# # be saved in the "raster" folder
+# # as defined by the task name
+# df$task <- "raster"
+# task <- rs_build_task(
+#   df = df,
+#   roi = roi,
+#   format = "geotiff"
+# )
+# 
+# # request the task to be executed
+# rs_request(
+#   request = task,
+#   user = "earth_data_user",
+#   transfer = TRUE,
+#   path = "~/some_path",
+#   verbose = TRUE
+# )
 
 ## ----eval=FALSE---------------------------------------------------------------
-#  r_raster <- terra::rast(
-#    file.path("~/some_path","raster/MCD12Q2.006_Greenup_0_doy2010001_aid0001.tif")
-#    )
+# r_raster <- terra::rast(
+#   file.path("~/some_path","raster/MCD12Q2.006_Greenup_0_doy2010001_aid0001.tif")
+#   )
 
 ## -----------------------------------------------------------------------------
 # convert to data frame for plotting
